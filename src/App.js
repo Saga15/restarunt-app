@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Home from "./components/Home";
+import RestoList from "./components/RestoList";
+import RestoDetails from "./components/RestoDetails";
+import RestoSearch from "./components/RestoSearch";
+import RestoUpdate from "./components/RestoUpdate";
+import RestoCreate from "./components/RestoCreate";
+import Login from "./components/Login";
+import NavBarMenu from "./components/NavBarMenu";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBarMenu/>
+        <Routes>
+          <Route path="/list" element={<RestoList />}>
+            RestoList
+          </Route>
+          <Route path="/create" element={<RestoCreate />}>
+            RestoCreate
+          </Route>
+          <Route path="/search" element={<RestoSearch />}>
+            RestoSearch
+          </Route>
+          <Route path="/details" element={<RestoDetails />}>
+            RestoDetails
+          </Route>
+          <Route path="/update" element={<RestoUpdate/>}></Route>
+          <Route path="/" element={<Home />}>
+            Home
+          </Route><Route path="/login" element={<Login />}>
+            Login
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

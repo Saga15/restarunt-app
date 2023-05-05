@@ -1,0 +1,84 @@
+{
+  "login": [
+    {
+      "name": "tushar",
+      "password": "abc@123"
+    }
+  ],
+  "resto": [
+    {
+      "name": "Pizza Hut",
+      "email": "mail@test.com",
+      "rating": "4.3",
+      "address": "Kothrud",
+      "id": 1
+    },
+    {
+      "name": "Mc Donald",
+      "email": "mcdonald@test.com",
+      "rating": "4.3",
+      "address": "Baner",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Kaveri",
+      "address": "Balewadi",
+      "rating": "4.6",
+      "email": "kaveri@test.com"
+    },
+    {
+      "id": 4,
+      "name": "BBQ Nation",
+      "address": "Wakad",
+      "rating": "4.2",
+      "email": "bbqnation@test.com"
+    },
+    {
+      "id": 5,
+      "name": "Angara",
+      "address": "Camp",
+      "rating": "4.2",
+      "email": "angara@test.com"
+    },
+    {
+      "name": "Radha Hotel",
+      "email": "radha@test.com",
+      "rating": "4.6",
+      "address": "Mahalunge",
+      "id": 6
+    },
+    {
+      "name": "Shivratna",
+      "email": "shivratna@test.com",
+      "rating": "4.3",
+      "address": "Balewadi",
+      "id": 7
+    },
+    {
+      "name": "Lucky",
+      "email": "mail@test.com",
+      "rating": "4.3",
+      "address": "Karjat",
+      "id": 8
+    },
+    {
+      "name": "Govind Garden",
+      "email": "mail@test.com",
+      "rating": "4.2",
+      "address": "Hadapsar",
+      "id": 9
+    },
+    {
+      "name": "Savera",
+      "email": "savera@test.com",
+      "rating": "4.5",
+      "address": "Bavdhan",
+      "id": 10
+    },
+    {
+      "query": "\n    query IntrospectionQuery {\n      __schema {\n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ",
+      "id": 11
+    }
+  ]
+}
