@@ -3,10 +3,6 @@ import { useState, useEffect } from "react";
 // import { useLocation } from "react-router-dom";
 
 const RestoCreate = () => {
-
-  
-
-
   const [title, setTitle] = useState("Add Resto");
 
   const [state, setState] = useState({
@@ -24,7 +20,7 @@ const RestoCreate = () => {
   };
 
   const create = () => {
-   /*  if(location && location.state){
+    /*  if(location && location.state){
       var newState = [ ...state , location.state.id]
     } */
 
